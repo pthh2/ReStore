@@ -38,6 +38,20 @@ Note Neil cummings
 	7, "dotnet new gitignore" de tao file .gitignore de ghi file nao khong muondem len github, no cung tu dong ghi vao mot so files .
 	8, file appsettings.json khong de len githug thi run : right click on this file ->add to .gitignore
   
+	9, ta ca file ghi chu U la untrack, bay gio doi thanh chu A (la add) thi bam dau + o chu changes
+	10, box tren top ghi message cho commit ( ghi End section 2 )
 	
-	
-  
+    11, vao github accout tao mot repository ten ReStore. Lam toi day la xong buoc commit cua cac buoc
+	git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/pthh2/ReStore.git
+git push -u origin main
+
+12, change "master"  branch thanh "main" (trong git bash terminal):
+    "git branch -M main " 
+13, copy link tu link sau khi tao reposittory tre github run no:
+   "git remote add origin https://github.com/pthh2/ReStore.git"
+14, click "..." tren top -> pull, push -> push to
+
