@@ -1,0 +1,43 @@
+Note Neil cummings 
+13. create an entity framework migration
+ - copy '"ConnectionStrings": {
+    "DefaultConnection": "Data source=store.db"}' 
+     at file appsetting.Developent.json 
+
+ - www.nuget.org -> Dotnet-ef 3.1.0 copy command below and run in dir API:
+    dotnet tool install --global dotnet-ef --version 5.0.8
+ - muon check da install dotnet-ef chua dung command : "dotnet tool list -g"
+   neu version cu hon update command : dotnet tool update --global dotnet-ef --version 'Ten version muon update'
+ - muon xem ef available "dotnet ef"
+ -Tiep bai hoc : run  "dotnet ef migrations add InitialCreate -o Data/Migrations" Data la folder da tao de lam migration
+ -run "dotnet ef database update" to see
+ -ctr shift P , type sql -> open database , chon API/store.db, click nhin sqlite expore tap, thay store.db there
+ -right click on extension C# -> ..setting ->check on Enable Import Completion
+ 
+ 14. seed database
+	-snipets folder -> copy content file productsSeed -> paste vao Initiale function trong file Data/DbInnitializer.cs
+	
+ 15. Migrateing the database and seeding data in code
+   - Trong file program.cs, remove run() trong : CreateHostBuilder(args).Build().Run(), viet CreateHostBuilder(args).Build().Run(); thanh 
+     var host = CreateHostBuilder(args).Build();
+   - lam delete database roi quan sat thay database da bi delete : dotnet ef database drop
+   - run : dotnet watch run , thay store.db co lai va data duoc insert vao database
+   
+  16. creating an API contoller to return a list of products
+    - ctor tao controller
+  17.Using async methods when querying a database
+  18. Saving our code into source control - git
+	1, Click. ben trai chum 3 vong tron
+	2, Click Initialize Repository button
+	   shift control p -> click checck mark on top leff = > yes
+	3, tao file gitignore trong folder project dang lam de chua cac file khong gui len github : dotnet new gitignore
+	4, file appsettings.Development.json va file appsettings.json khong muon dua len github vi no co cac thong tin quan trong, lam nhu sau de no vao file .gitignore:
+	    right click select "Add to gitignore
+	5, dung git bash terminal : ctr shift p -> type: select default profile -> chon git bash
+	6, dotnet new -l (xem list co gitignore khong)
+	7, "dotnet new gitignore" de tao file .gitignore de ghi file nao khong muondem len github, no cung tu dong ghi vao mot so files .
+	8, file appsettings.json khong de len githug thi run : right click on this file ->add to .gitignore
+  
+	
+	
+  
