@@ -96,6 +96,17 @@ Note Neil cummings
  37. Using Material UI Theme
  38. Challenge solution and setting background color
  Save source code : Changes click "+" ===> no chay "staged Changes" , box o tren note "End section 3" roi bam "enter"
+ 
+ SECTION 4
+  40. Introduction
+  41. Setting up react router
+    reactrouter.com 
+	install react-router-dom
+	cd to client folder then install:
+	npm install react-router-dom@5.3.0 @types/react-router-dom@5.3.2
+ 42. Adding Nav Links to the AppBar
+ 43. Styling the nav bar
+ 44. Fetching a product on component load
 
 	
 
