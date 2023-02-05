@@ -54,6 +54,7 @@ Note Neil cummings
 	13, copy link tu link sau khi tao reposittory tre github run no:
 		   "git remote add origin https://github.com/pthh2/ReStore.git"
 	14, click "..." tren top -> pull, push -> push to
+SECTION 3- React basics 
 21. Creating the react application
 	- npx create-react-app client --template typescript --use-npm
 	- move to client on git bash and run : npm start
@@ -97,7 +98,7 @@ Note Neil cummings
  38. Challenge solution and setting background color
  Save source code : Changes click "+" ===> no chay "staged Changes" , box o tren note "End section 3" roi bam "enter"
  
- SECTION 4
+ SECTION 4 - React router
   40. Introduction
   41. Setting up react router
     reactrouter.com 
@@ -107,7 +108,33 @@ Note Neil cummings
  42. Adding Nav Links to the AppBar
  43. Styling the nav bar
  44. Fetching a product on component load
+ 45. Adding the product detail page
+ 
+ SECTION 5 - Error handleing
+ 47. 
+ 48. setting up an error controller
+ 49.adding exeption handling middleware
+ 50. centralising the axios requests
+ 51.Creating a react component to test the error responseS
+ 52. using Axios interceptors
 
+ 53. Add toast 
+     search react toastify 
+	 https://www.npmjs.com
+	 cd client => npm install react-toastify
+ 54. handing validation errors
+ 55. creating a server error component
+	https://v5.reactrouter.com/web/api/Router
 	
+	
+	MEO: nhin tat ca packages trong npm:  npm view npm
+	MEO: dung cai nay check loi axios  
+	//---------------------------
 
+    MEO: start : dotnet watch run  ; bash : npm start
 
+ 56. Creating a not found component
+ 57. Adding a delay and loading indicators
+  <Backdrop></Backdrop>
+ 58. using the dotnet debugger
+ 59. using the react debugger

@@ -3,20 +3,27 @@ import { useParams } from "react-router-dom";
 import { Product } from "../app/models/product";
 import { useState } from "react";
 import { useEffect } from "react";
+import agent from "../app/api/agent";
+
 import axios from "axios";
+import NotFound from "../app/errors/NotFound";
+import LoadingComponent from "../app/layout/LoadingComponent";
 
 export default function ProductDetails() {
     const { id } = useParams<{ id: string }>();
     const [product, setProduct] = useState<Product | null>(null);
     const [loading, setLoading] = useState(true);
+
     useEffect(() => {
-        axios.get(`http://localhost:5116/api/products/${id}`)
-            .then(response => setProduct(response.data))
+        agent.Catalog.details(parseInt(id))
+            //axios.get(`http://localhost:5116/api/products/${id}`)
+            .then(response => setProduct(response))
             .catch(error => console.log(error))
             .finally(() => setLoading(false));
     }, [id])
-    if (loading) return <h3>Loading...</h3>
-    if (!product) return <h3>Product not found.</h3>
+
+    if (loading) return <LoadingComponent message='Loading product...' />
+    if (!product) return <NotFound />
     return (
         <Grid container spacing={6}>
             <Grid item xs={6}>
@@ -24,7 +31,7 @@ export default function ProductDetails() {
             </Grid>
 
             <Grid item xs={6}>
-                <Typography variant='h3' > {product.name}  </Typography>
+                <Typography variant='h3' > {product.name} xxxxx </Typography>
                 <Divider sx={{ mb: 2 }} />
                 <Typography variant='h4' > ${(product.price / 100).toFixed(2)}  </Typography>
                 <TableContainer>

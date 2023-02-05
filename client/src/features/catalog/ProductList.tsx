@@ -1,4 +1,4 @@
-import { List, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { Product } from "../../app/models/product";
 import ProductCard from "./ProductCard";
 
