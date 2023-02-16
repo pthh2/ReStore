@@ -96,7 +96,7 @@ SECTION 3- React basics
  36.Stayling and productcard
  37. Using Material UI Theme
  38. Challenge solution and setting background color
- Save source code : Changes click "+" ===> no chay "staged Changes" , box o tren note "End section 3" roi bam "enter"
+ Save source code : Changes click "+" ===> no chay "staged Changes" , box o tren note "End section 3" roi bam "enter" ->pull. push -> push to 
  
  SECTION 4 - React router
   40. Introduction
@@ -138,3 +138,46 @@ SECTION 3- React basics
   <Backdrop></Backdrop>
  58. using the dotnet debugger
  59. using the react debugger
+ 
+ 61. create basket entities
+ MEO: nhac goi y -> install extension "IntelliCode"
+ 
+ 62. EF Relationships
+    API git:(main) tao tables: dotnet ef migrations add BasketEntityAdded 
+	remove migration: dotnet ef migrations remove
+	
+	Tao table cach khac: dotnet ef migrations add BasketEntityAdded
+	
+	run xem co loi g: dotnet watch run
+MEO: view database : right click on database file -> open database
+    
+	Khong tao duoctables thi dung: dotnet ef database update
+	
+ 63. create basket controller
+ 64. Adding the basket item endpoint logic
+ 65. Using debugger to check the add item logic
+ 66.Shaping the date to return
+   
+ 67.Removing an item from the basket
+ 68. using createAtRoute
+ 69.Adding the axios methods for the basket
+   for the NOTE: released version of Material UI 5 the command: npm install@mui/lab
+   trong bai nay install: npm install @material-ui/lab@next
+ 70. create a basket component
+   doi json thanh typescript - generate typescript: json2ts.com
+   
+ 71. styling the basket page with a table
+     next.material-ui.com copy het phan <TableContainer>
+	 
+ 72. Createing a react context
+ 73. app initalisation - fetching basket on app start
+	 search "react get cookies"  and copy
+ 74. update the header with basket item count
+ 75. Removing a basket item
+ 76. Adding specific loading indicators for the buttons
+ 77. challenge - basket summary
+     get content for  file BasketSummary.tsx tu tai lieu lop hoc courseAssets
+ 78. challenge solution
+ 79. updating the product detail part one
+ 80. updating  the product detail component to add items to card part 2
+ 81. adding a check

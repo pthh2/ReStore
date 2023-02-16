@@ -8,15 +8,18 @@ import { Router } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 
 import { BrowserRouter } from 'react-router-dom';
+import { StoreProvider } from './app/context/StoreContext';
 
 
 export const history = createBrowserHistory();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={history}>
-      <App />
-    </Router>
+    <StoreProvider>
+      <Router history={history}>
+        <App />
+      </Router>
+    </StoreProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

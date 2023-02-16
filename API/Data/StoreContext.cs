@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using API.Entities;
-
+using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 
 namespace API.Data
 {
@@ -14,12 +14,9 @@ namespace API.Data
         {
 
         }
-
-        // public StoreContext(DbSet<Product> Products)
-        // {
-        //     Products = Products;
-        // }
-
         public DbSet<Product> Products { get; set; }
+
+        public DbSet<Basket> Baskets { get; set; }
+
     }
 }
